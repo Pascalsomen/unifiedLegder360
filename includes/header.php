@@ -297,7 +297,7 @@ body {
                                 <li><a class="dropdown-item" href="<?= $base_url ?>/accounting/account_ledger.php">Account Ledger</a></li>
 
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="<?= $base_url ?>/accounting/financial_statements.php">Financial Statements</a></li>
+                                <li><a class="dropdown-item" href="<?= $base_url ?>/accounting/balanceSheet.php">Balance Sheet</a></li>
                                 <li><a class="dropdown-item" href="<?= $base_url ?>/accounting/accounting_periods.php">Accounting Periods</a></li>
                             </ul>
                         </li>
