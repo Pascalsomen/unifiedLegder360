@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $account_number = $_POST['account_number'];
 
-    
+
 
     $idnumber = $_POST['idnumber'];
     $province = $_POST['province'];
@@ -73,7 +73,7 @@ $id_number =$accountCode.$nextNumber.$projectCode;
         'cell' => $cell,
         'village' => $village,
         'account_number' => $account_number,
-        
+
 
 
     ]);
@@ -85,7 +85,7 @@ $id_number =$accountCode.$nextNumber.$projectCode;
     $parentAccount = 1;
 
     $stmt = $pdo->prepare("INSERT INTO chart_of_accounts
-                          (account_code, account_name, account_type, parent_account)
+                          (account_code, account_name, account_type, parent_id)
                           VALUES (?, ?, ?, ?)");
     $stmt->execute([$accountCode, $accountName, $accountType, $parentAccount]);
 
@@ -108,7 +108,7 @@ $id_number =$accountCode.$nextNumber.$projectCode;
     <input type="text" class="form-control" name="idnumber" id="idnumber" required>
     <label for="account_number">Bank Account Number</label>
     <input type="text" class="form-control" name="account_number" id="account_number" required>
-    
+
 
 
     <label for="address">Province:</label>
@@ -127,7 +127,7 @@ $id_number =$accountCode.$nextNumber.$projectCode;
 
         <label for="address">Village:</label>
     <textarea name="village" class="form-control" id="village" required></textarea>
-    
+
     <label for="address">Additional Address:</label>
     <textarea name="address" class="form-control" id="address" ></textarea>
 

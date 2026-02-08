@@ -1,11 +1,12 @@
 <?php
-require_once __DIR__ . '/includes/header.php';
+
+require_once __DIR__ . '/../../includes/header.php';  // Include header
 
 // ==================================================
 // INITIAL CONFIGURATION & DATE SETUP
 // ==================================================
 
-include '../inc/conn.php';
+
 
 // Default date range: current week (Monday to Sunday)
 if (isset($_GET['from']) && $_GET['from'] !== '' &&
@@ -796,4 +797,6 @@ function renderSingleNote($pdo, $noteCode, $noteTitle, $from, $to, $asset_types)
     });
 </script>
 
-<?php require_once __DIR__ . '/includes/footer.php'; ?>
+<?php
+
+require_once __DIR__ . '/../../includes/footer.php';  // Include header?>
