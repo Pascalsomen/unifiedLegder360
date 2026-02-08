@@ -97,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="login-card" style="border:1px solid black">
             <div class="login-header">
             <img src="assets/logo.png" style="height:100px">
-                <p class="mb-0" style="color:black">RCEF: Please sign in to continue</p>
+                <p class="mb-0" style="color:black">UnifiedLedger 360 : Please sign in to continue</p>
             </div>
 
             <div class="login-body">

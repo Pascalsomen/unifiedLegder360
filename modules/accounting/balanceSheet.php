@@ -458,7 +458,7 @@ if (isset($_POST['save_cit'])) {
 
                         <tr>
                             <td class="account-name">Property, Plant and Equipment</td>
-                            <td><a href="index?resto=notes&note=1" class="note-link">1</a></td>
+                            <td><a href="notes.php?note=1" class="note-link">1</a></td>
                             <td class="text-end"><?= number_format($ppeTotal_previous, 0) ?></td>
                             <td class="text-end"><?= number_format($ppeTotal_current, 0) ?></td>
                             <td class="text-end"><?= formatChange($ppeTotal_current - $ppeTotal_previous) ?></td>
@@ -466,7 +466,7 @@ if (isset($_POST['save_cit'])) {
 
                         <tr>
                             <td class="account-name">Investments</td>
-                            <td><a href="index?resto=notes&note=2" class="note-link">2</a></td>
+                            <td><a href="notes.php?note=2" class="note-link">2</a></td>
                             <td class="text-end"><?= number_format($investment_previous, 0) ?></td>
                             <td class="text-end"><?= number_format($investment_current, 0) ?></td>
                             <td class="text-end"><?= formatChange($investment_current - $investment_previous) ?></td>
@@ -485,7 +485,7 @@ if (isset($_POST['save_cit'])) {
 
                         <tr>
                             <td class="account-name">Cash and Cash Equivalent</td>
-                            <td><a href="index?resto=notes&note=3" class="note-link">3</a></td>
+                            <td><a href="notes.php?note=3" class="note-link">3</a></td>
                             <td class="text-end"><?= number_format($cashTotal_previous, 0) ?></td>
                             <td class="text-end"><?= number_format($cashTotal_current, 0) ?></td>
                             <td class="text-end"><?= formatChange($cashTotal_current - $cashTotal_previous) ?></td>
@@ -493,7 +493,7 @@ if (isset($_POST['save_cit'])) {
 
                         <tr>
                             <td class="account-name">Accounts Receivable</td>
-                            <td><a href="index?resto=notes&note=4" class="note-link">4</a></td>
+                            <td><a href="notes.php?note=4" class="note-link">4</a></td>
                             <td class="text-end"><?= number_format($arTotal_previous, 0) ?></td>
                             <td class="text-end"><?= number_format($arTotal_current, 0) ?></td>
                             <td class="text-end"><?= formatChange($arTotal_current - $arTotal_previous) ?></td>
@@ -501,7 +501,7 @@ if (isset($_POST['save_cit'])) {
 
                         <tr>
                             <td class="account-name">Inventory / Stock</td>
-                            <td><a href="index?resto=notes&note=5" class="note-link">5</a></td>
+                            <td><a href="notes.php?note=5" class="note-link">5</a></td>
                             <td class="text-end"><?= number_format($stockTotal_previous, 0) ?></td>
                             <td class="text-end"><?= number_format($stockTotal_current, 0) ?></td>
                             <td class="text-end"><?= formatChange($stockTotal_current - $stockTotal_previous) ?></td>
@@ -509,7 +509,7 @@ if (isset($_POST['save_cit'])) {
 
                         <tr>
                             <td class="account-name">Prepayments</td>
-                            <td><a href="index?resto=notes&note=6" class="note-link">6</a></td>
+                            <td><a href="notes.php?note=6" class="note-link">6</a></td>
                             <td class="text-end"><?= number_format($advancepayment_previous, 0) ?></td>
                             <td class="text-end"><?= number_format($advancepayment_current, 0) ?></td>
                             <td class="text-end"><?= formatChange($advancepayment_current - $advancepayment_previous) ?></td>
@@ -517,7 +517,7 @@ if (isset($_POST['save_cit'])) {
 
                         <tr>
                             <td class="account-name">Business Advance</td>
-                            <td><a href="index?resto=notes&note=7" class="note-link">7</a></td>
+                            <td><a href="notes.php?note=7" class="note-link">7</a></td>
                             <td class="text-end"><?= number_format($advanceTotal_previous, 0) ?></td>
                             <td class="text-end"><?= number_format($advanceTotal_current, 0) ?></td>
                             <td class="text-end"><?= formatChange($advanceTotal_current - $advanceTotal_previous) ?></td>
@@ -525,7 +525,7 @@ if (isset($_POST['save_cit'])) {
 
                         <tr>
                             <td class="account-name">Withholding Taxes</td>
-                            <td><a href="index?resto=notes&note=8" class="note-link">8</a></td>
+                            <td><a href="notes.php?note=8" class="note-link">8</a></td>
                             <td class="text-end"><?= number_format($withholdings3_previous, 0) ?></td>
                             <td class="text-end"><?= number_format($withholdings3_current, 0) ?></td>
                             <td class="text-end"><?= formatChange($withholdings3_current - $withholdings3_previous) ?></td>
@@ -556,7 +556,7 @@ if (isset($_POST['save_cit'])) {
 
                         <tr>
                             <td class="account-name">Payables / Suppliers</td>
-                            <td><a href="index?resto=notes&note=9" class="note-link">9</a></td>
+                            <td><a href="notes.php?note=9" class="note-link">9</a></td>
                             <td class="text-end"><?= number_format($payables_previous, 0) ?></td>
                             <td class="text-end"><?= number_format($payables_current, 0) ?></td>
                             <td class="text-end"><?= formatChange($payables_current - $payables_previous) ?></td>
@@ -564,7 +564,7 @@ if (isset($_POST['save_cit'])) {
 
                         <tr>
                             <td class="account-name">Taxes Payable</td>
-                            <td><a href="index?resto=notes&note=10" class="note-link">10</a></td>
+                            <td><a href="notes.php?note=10" class="note-link">10</a></td>
                             <td class="text-end"><?= number_format($taxes_previous, 0) ?></td>
                             <td class="text-end"><?= number_format($taxes_current, 0) ?></td>
                             <td class="text-end"><?= formatChange($taxes_current - $taxes_previous) ?></td>
@@ -582,7 +582,7 @@ if (isset($_POST['save_cit'])) {
 
                         <tr>
                             <td class="account-name">Other Payables</td>
-                            <td><a href="index?resto=notes&note=11" class="note-link">11</a></td>
+                            <td><a href="notes.php?note=11" class="note-link">11</a></td>
                             <td class="text-end"><?= number_format($otherpayable_previous, 0) ?></td>
                             <td class="text-end"><?= number_format($otherpayable_current, 0) ?></td>
                             <td class="text-end"><?= formatChange($otherpayable_current - $otherpayable_previous) ?></td>
@@ -590,7 +590,7 @@ if (isset($_POST['save_cit'])) {
 
                         <tr>
                             <td class="account-name">Accrued Expenses</td>
-                            <td><a href="index?resto=notes&note=12" class="note-link">12</a></td>
+                            <td><a href="notes.php?note=12" class="note-link">12</a></td>
                             <td class="text-end"><?= number_format($accrued_previous, 0) ?></td>
                             <td class="text-end"><?= number_format($accrued_current, 0) ?></td>
                             <td class="text-end"><?= formatChange($accrued_current - $accrued_previous) ?></td>
@@ -601,7 +601,7 @@ if (isset($_POST['save_cit'])) {
 
                         <tr>
                             <td class="account-name">Long Term Borrowing</td>
-                            <td><a href="index?resto=notes&note=13" class="note-link">13</a></td>
+                            <td><a href="notes.php?note=13" class="note-link">13</a></td>
                             <td class="text-end"><?= number_format($long_previous, 0) ?></td>
                             <td class="text-end"><?= number_format($long_current, 0) ?></td>
                             <td class="text-end"><?= formatChange($long_current - $long_previous) ?></td>
