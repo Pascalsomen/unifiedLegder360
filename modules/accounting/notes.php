@@ -468,9 +468,7 @@ function renderSingleNote($pdo, $noteCode, $noteTitle, $from, $to, $asset_types)
                     onclick="saveAllNotesAsExcel('content', 'notes_<?= htmlspecialchars($from) ?>_to_<?= htmlspecialchars($to) ?>.xls')">
                     Export to Excel
                 </button>
-                <a href="?resto=depreciation_history" class="btn btn-info">
-                    <i class="fas fa-history"></i> View Depreciation History
-                </a>
+
             </div>
         </div>
     </div>

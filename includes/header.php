@@ -81,8 +81,8 @@ $breadcrumbs = generateBreadcrumbs('/');
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Select2 -->
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" /> -->
 
     <!-- DataTables -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
@@ -292,12 +292,13 @@ body {
                                 <li><a class="dropdown-item" href="<?= $base_url ?>/accounting/chart_of_accounts.php">Chart of Accounts</a></li>
                                 <li><a class="dropdown-item" href="<?= $base_url ?>/accounting/journal_entries.php">Journal Entries</a></li>
                                 <li><a class="dropdown-item" href="<?= $base_url ?>/accounting/trial_balance.php">Trial Balance</a></li>
-                                 <li><a class="dropdown-item" href="<?= $base_url ?>/accounting/transactions.php">Transactions</a></li>
                                 <li><a class="dropdown-item" href="<?= $base_url ?>/accounting/general_ledger.php">General Ledger</a></li>
                                 <li><a class="dropdown-item" href="<?= $base_url ?>/accounting/account_ledger.php">Account Ledger</a></li>
 
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="<?= $base_url ?>/accounting/balanceSheet.php">Balance Sheet</a></li>
+                                <li><a class="dropdown-item" href="<?= $base_url ?>/accounting/income_statment.php">Income Statement</a></li>
+                                     <li><a class="dropdown-item" href="<?= $base_url ?>/accounting/notes.php">Notes</a></li>
                                 <li><a class="dropdown-item" href="<?= $base_url ?>/accounting/accounting_periods.php">Accounting Periods</a></li>
                             </ul>
                         </li>

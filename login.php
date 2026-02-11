@@ -2,11 +2,13 @@
 session_start();
 require_once __DIR__ . '/config/database.php';
 require_once __DIR__ . '/includes/functions.php';
+
 // Redirect to dashboard if already logged in
 if (isset($_SESSION['user_id'])) {
     header("Location:  index.php");
     exit();
 }
+
 // Handle form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = trim($_POST['username']);
@@ -28,11 +30,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['user_name'] = $user['full_name'];
             $_SESSION['email'] = $username;
 
-
-
-
-
-
             // Record login
             $stmt = $pdo->prepare("UPDATE users SET last_login = NOW() WHERE id = ?");
             $stmt->execute([$user['id']]);
@@ -53,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | CEF ERP SYSTEM</title>
+    <title>Login | UnifiedLedger 360</title>
 
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -64,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <!-- Custom CSS -->
     <style>
         body {
-            background-color: #f8f9fa;
+            background-color: #111;
             height: 100vh;
             display: flex;
             align-items: center;
@@ -73,38 +70,85 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             width: 100%;
             max-width: 400px;
             margin: 0 auto;
-            box-shadow: 0 0 20px white;
             border-radius: 10px;
             overflow: hidden;
+            border: 1px solid #333;
+            background: #000;
         }
         .login-header {
-            background-color:  #f8f9fa;
-            color: white;
-            padding: 20px;
+            background-color: #000;
+            padding: 25px 20px;
             text-align: center;
+            border-bottom: 2px solid #FFD700;
         }
         .login-body {
             padding: 30px;
-            background-color: white;
+            background-color: #000;
         }
         .form-floating {
             margin-bottom: 1.5rem;
+        }
+        .form-control {
+            background-color: #222;
+            border: 1px solid #333;
+            color: #fff;
+        }
+        .form-control:focus {
+            background-color: #222;
+            border-color: #FFD700;
+            box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.25);
+            color: #fff;
+        }
+        .form-floating > label {
+            color: #888;
+        }
+        .form-floating > .form-control:focus ~ label,
+        .form-floating > .form-control:not(:placeholder-shown) ~ label {
+            color: #FFD700;
+        }
+        .btn-gold {
+            background-color: #FFD700;
+            border-color: #FFD700;
+            color: #000;
+            font-weight: 600;
+        }
+        .btn-gold:hover {
+            background-color: #FFC107;
+            border-color: #FFC107;
+            color: #000;
+        }
+        .forgot-link {
+            color: #FFD700;
+            text-decoration: none;
+        }
+        .forgot-link:hover {
+            color: #FFC107;
+            text-decoration: underline;
+        }
+        .form-check-input:checked {
+            background-color: #FFD700;
+            border-color: #FFD700;
+        }
+        hr {
+            border-color: #333;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="login-card" style="border:1px solid black">
+        <div class="login-card">
             <div class="login-header">
-            <img src="assets/logo.png" style="height:100px">
-                <p class="mb-0" style="color:black">UnifiedLedger 360 : Please sign in to continue</p>
+                <img src="assets/logo-white.png" style="height:80px; margin-bottom: 15px;">
+                <p class="mb-0" style="color:#FFD700; font-weight:500;">UnifiedLedger 360</p>
+                <p class="mb-0" style="color:#aaa; font-size:14px; margin-top:5px;">Please sign in to continue</p>
             </div>
 
             <div class="login-body">
                 <?php if (isset($error)): ?>
                     <div class="alert alert-danger alert-dismissible fade show">
+                        <i class="fas fa-exclamation-circle me-2"></i>
                         <?= $error ?>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" style="filter: invert(1);"></button>
                     </div>
                 <?php endif; ?>
 
@@ -124,19 +168,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class="d-flex justify-content-between align-items-center mb-4">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="remember" name="remember">
-                            <label class="form-check-label" for="remember">Remember me</label>
+                            <label class="form-check-label" for="remember" style="color:#aaa;">Remember me</label>
                         </div>
-                        <a href="/forgot-password.php" class="text-decoration-none">Forgot password?</a>
+                        <a href="/forgot-password.php" class="forgot-link">Forgot password?</a>
                     </div>
 
-                    <button class="w-100 btn btn-lg btn-warning" type="submit">
+                    <button class="w-100 btn btn-lg btn-gold" type="submit">
                         <i class="fas fa-sign-in-alt me-2"></i> Sign in
                     </button>
                 </form>
 
                 <hr class="my-4">
 
-
+                <div class="text-center" style="color:#777; font-size:12px;">
+                    <i class="fas fa-shield-alt me-1"></i> Secure ERP System Access
+                </div>
             </div>
         </div>
     </div>
